@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="utf-8"%>
 
 <%@ page import="java.util.List"                   %>
 <%@ page import="java.util.Iterator"               %>
@@ -12,13 +12,14 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title> list.jsp  </title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title> list.jsp  </title>
 </head>
+
+
 <body>
 
-
-<h2> Å¥ºê¸®µå   History Å×ÀÌºí¿¡   ÀÔ·ÂµÈ ÀÚ·á¸¦ °¡Á®¿À±â (list.jsp)  </h2> 
+<h2> íë¸Œë¦¬ë“œ   History í…Œì´ë¸”ì—   ì…ë ¥ëœ ìë£Œë¥¼ ê°€ì ¸ì˜¤ê¸° (list.jsp)  </h2> 
 <h>
 
 <table cellpadding="1">
@@ -28,6 +29,8 @@
         <td align="center"> hostYear </td>
         <td align="center"> score </td>
         <td align="center"> unit </td>
+        <td align="center"> ìˆ˜ì •ë²„íŠ¼ </td>
+        <td align="center"> ì‚­ì œë²„íŠ¼ </td>
     </tr>
 
 
@@ -39,7 +42,7 @@
     Transaction    transaction    = null ;
 
     sessionFactory = HibernateUtil.getSessionFactory() ; 
-    con            = HibernateUtil.getSession() ; //Session session = HibernateUtil.getSession() ; 
+    con            = HibernateUtil.getSession() ;
     result         = con.createCriteria(History.class).list() ; 
     
     if ( result.size() > 0) {
@@ -53,15 +56,16 @@
         <td align="center"> <%= history.getHostYear()  %> </td>
         <td align="center"> <%= history.getScore()     %> </td>
         <td align="center"> <%= history.getUnit()      %> </td>
+        <td align="center"> <a href="detail.jsp?eventCode=<%= history.getEventCode() %>"> ìˆ˜ì •  </a> </td>
+        <td align="center"> <a href="delete.jsp?eventCode=<%= history.getEventCode() %>"> ì‚­ì œ  </a> </td>
     </tr>
     	
-
 <%
         }
     } else {
 %>
     <tr>
-        <td colspan="5"> ÀÚ·á°¡  ¾ø½À´Ï´Ù. </td>
+        <td colspan="7"> ìë£Œê°€  ì—†ìŠµë‹ˆë‹¤. </td>
     </tr>
 <%
     }

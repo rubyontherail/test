@@ -5,29 +5,27 @@
 <%@ page import="org.hibernate.Transaction"        %>
 <%@ page import="org.hibernate.util.HibernateUtil" %>
 
-
-<% request.setCharacterEncoding("utf-8"); %>
-
 <jsp:useBean scope="page" id="history" class="org.hibernate.ch01.History" />
 <jsp:setProperty name="history" property="*" />
 
+
 <%
-	SessionFactory sessionFactory = null ; 
-	Session        con            = null ; // Session session
-	Transaction    tx             = null;
+    SessionFactory sessionFactory = null ; 
+    Session        con            = null ; // Session session
+    Transaction    tx             = null;
 
     try {
         sessionFactory = HibernateUtil.getSessionFactory() ; 
         con            = HibernateUtil.getSession()        ; 
         tx             = con.beginTransaction()            ; 
-        con.save(history)      ; 
+        con.delete(history) ; 
         tx.commit()            ; 
     } catch (Exception ex) {
-    	if (tx != null) {
-    		tx.rollback() ; 
-    	}
+        if (tx != null) {
+            tx.rollback() ; 
+        }
     } finally {
-    	con.close();
+        con.close();
     } 
 %>
 
@@ -35,3 +33,6 @@
 <jsp:forward page="list.jsp"/>
 
 
+
+    
+    

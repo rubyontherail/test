@@ -72,31 +72,33 @@ public class CUBRIDDialect extends Dialect
         registerFunction("rtrim",     new StandardSQLFunction("rtrim")                            );
         registerFunction("nvl",       new StandardSQLFunction("nvl")                              );
         registerFunction("nvl2",      new StandardSQLFunction("nvl2")                             );
-        //registerFunction("sign",      new StandardSQLFunction("sign",         StandardBasicTypes.INTEGER)  );
-        //registerFunction("chr",       new StandardSQLFunction("chr",          StandardBasicTypes.CHARACTER));
-        //registerFunction("to_char",   new StandardSQLFunction("to_char",      StandardBasicTypes.STRING)   );
-        //registerFunction("to_date",   new StandardSQLFunction("to_date",      StandardBasicTypes.TIMESTAMP));
-        //registerFunction("last_day",  new StandardSQLFunction("last_day",     StandardBasicTypes.DATE)     );
-        //registerFunction("instr",     new StandardSQLFunction("instr",        StandardBasicTypes.INTEGER)  );
-        //registerFunction("instrb",    new StandardSQLFunction("instrb",       StandardBasicTypes.INTEGER)  );
-        //registerFunction("lpad",      new StandardSQLFunction("lpad",         StandardBasicTypes.STRING)   );
-        //registerFunction("replace",   new StandardSQLFunction("replace",      StandardBasicTypes.STRING)   );
-        //registerFunction("rpad",      new StandardSQLFunction("rpad",         StandardBasicTypes.STRING)   );
-        //registerFunction("substr",    new StandardSQLFunction("substr",       StandardBasicTypes.STRING)   );
-        //registerFunction("substrb",   new StandardSQLFunction("substrb",      StandardBasicTypes.STRING)   );
-        //registerFunction("translate", new StandardSQLFunction("translate",    StandardBasicTypes.STRING)   );
-        //registerFunction("add_months",        new StandardSQLFunction("add_months",       StandardBasicTypes.DATE)             );
-        //registerFunction("months_between",    new StandardSQLFunction("months_between",   StandardBasicTypes.FLOAT)            );
+        /*
+        registerFunction("sign",      new StandardSQLFunction("sign",         StandardBasicTypes.INTEGER)  );
+        registerFunction("chr",       new StandardSQLFunction("chr",          StandardBasicTypes.CHARACTER));
+        registerFunction("to_char",   new StandardSQLFunction("to_char",      StandardBasicTypes.STRING)   );
+        registerFunction("to_date",   new StandardSQLFunction("to_date",      StandardBasicTypes.TIMESTAMP));
+        registerFunction("last_day",  new StandardSQLFunction("last_day",     StandardBasicTypes.DATE)     );
+        registerFunction("instr",     new StandardSQLFunction("instr",        StandardBasicTypes.INTEGER)  );
+        registerFunction("instrb",    new StandardSQLFunction("instrb",       StandardBasicTypes.INTEGER)  );
+        registerFunction("lpad",      new StandardSQLFunction("lpad",         StandardBasicTypes.STRING)   );
+        registerFunction("replace",   new StandardSQLFunction("replace",      StandardBasicTypes.STRING)   );
+        registerFunction("rpad",      new StandardSQLFunction("rpad",         StandardBasicTypes.STRING)   );
+        registerFunction("substr",    new StandardSQLFunction("substr",       StandardBasicTypes.STRING)   );
+        registerFunction("substrb",   new StandardSQLFunction("substrb",      StandardBasicTypes.STRING)   );
+        registerFunction("translate", new StandardSQLFunction("translate",    StandardBasicTypes.STRING)   );
+        registerFunction("add_months",        new StandardSQLFunction("add_months",       StandardBasicTypes.DATE)             );
+        registerFunction("months_between",    new StandardSQLFunction("months_between",   StandardBasicTypes.FLOAT)            );
 
-        //registerFunction("current_date",      new NoArgSQLFunction("current_date",        StandardBasicTypes.DATE,     false)  );
-        //registerFunction("current_time",      new NoArgSQLFunction("current_time",        StandardBasicTypes.TIME,     false)  );
-        //registerFunction("current_timestamp", new NoArgSQLFunction("current_timestamp",   StandardBasicTypes.TIMESTAMP,false)  );
-        //registerFunction("sysdate",           new NoArgSQLFunction("sysdate",             StandardBasicTypes.DATE,     false)  );
-        //registerFunction("systime",           new NoArgSQLFunction("systime",             StandardBasicTypes.TIME,     false)  );
-        //registerFunction("systimestamp",      new NoArgSQLFunction("systimestamp",        StandardBasicTypes.TIMESTAMP,false)  );
-        //registerFunction("user",              new NoArgSQLFunction("user",                StandardBasicTypes.STRING,   false)  );
-        //registerFunction("rownum",            new NoArgSQLFunction("rownum",              StandardBasicTypes.LONG,     false)  );
-        //registerFunction("concat",            new VarArgsSQLFunction(StandardBasicTypes.STRING, "", "||", ""));
+        registerFunction("current_date",      new NoArgSQLFunction("current_date",        StandardBasicTypes.DATE,     false)  );
+        registerFunction("current_time",      new NoArgSQLFunction("current_time",        StandardBasicTypes.TIME,     false)  );
+        registerFunction("current_timestamp", new NoArgSQLFunction("current_timestamp",   StandardBasicTypes.TIMESTAMP,false)  );
+        registerFunction("sysdate",           new NoArgSQLFunction("sysdate",             StandardBasicTypes.DATE,     false)  );
+        registerFunction("systime",           new NoArgSQLFunction("systime",             StandardBasicTypes.TIME,     false)  );
+        registerFunction("systimestamp",      new NoArgSQLFunction("systimestamp",        StandardBasicTypes.TIMESTAMP,false)  );
+        registerFunction("user",              new NoArgSQLFunction("user",                StandardBasicTypes.STRING,   false)  );
+        registerFunction("rownum",            new NoArgSQLFunction("rownum",              StandardBasicTypes.LONG,     false)  );
+        registerFunction("concat",            new VarArgsSQLFunction(StandardBasicTypes.STRING, "", "||", ""));
+        */
     }
 
     public String getAddColumnString()
