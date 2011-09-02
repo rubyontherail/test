@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title> 큐브리드 History 테이블에  자료 입력하기 </title>
+</head>
+<body>
+
+<h2>큐브리드 History 테이블에  자료 입력하기 </h2>
+<hr>
+<br>
+
+
+<form name="frm_insert" method="post" action="insert.jsp" border="1">
+    <table cellpadding=1>
+        <tr>
+            <td align="center"> eventCode </td>
+            <td align="center"> athlete </td>
+            <td align="center"> hostYear </td>
+            <td align="center"> score </td>
+            <td align="center"> unit </td>
+        </tr>
+    
+        <tr>
+            <td>
+                <input type="text" name="eventCode" maxlength="5"/>
+            </td>
+            <td>
+                <input type="text" name="athlete" maxlength="40"/>
+            </td>
+            <td>
+                <input type="text" name="hostYear" maxlength="4"/>
+            </td>
+            <td>
+                <input type="text" name="score" maxlength="10"/>
+            </td>
+            <td>
+                <input type="text" name="unit" maxlength="5"/>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="5">
+                <input type="submit" value="입력" />
+                <input type="reset"  value="취소" />
+            </td>
+        </tr>
+    
+    </table>
+</form>
+
+
+
+</body>
+</html>

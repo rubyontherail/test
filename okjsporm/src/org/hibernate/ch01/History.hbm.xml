@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="org.hibernate.ch01">
+
+    <class name="History" table="HISTORY">
+        <id       name="eventCode" type="integer" column="EVENT_CODE"/>
+        <property name="athlete"   type="string"  column="ATHLETE"/>
+        <property name="hostYear"  type="integer" column="HOST_YEAR"/>
+        <property name="score"     type="string"  column="SCORE"/>
+        <property name="unit"      type="string"  column="UNIT"/>
+    </class>
+
+</hibernate-mapping>
